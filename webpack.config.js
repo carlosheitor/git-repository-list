@@ -1,15 +1,15 @@
 const path = require("path");
 module.exports = {
-  mode: 'development',
-  entry: ["@babel/polyfill", "./src/gituser.js"],
+  mode: "development",
+  entry: ["@babel/polyfill", "./src/app.js"],
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'main.js',
-    publicPath: '/assets/',
+    path: path.resolve(__dirname, "build"),
+    filename: "main.js",
+    publicPath: "/assets/",
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-  }
+    contentBase: path.join(__dirname, "dist"),
+  },
   // Loaders
   module: {
     rules: [
@@ -21,4 +21,4 @@ module.exports = {
       },
     ],
   },
-}
+};
